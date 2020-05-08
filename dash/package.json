@@ -4,7 +4,8 @@
   "description": "",
   "main": "main.js",
   "scripts": {
-    "start": "electron .",
+    "start": "npm run build && electron .",
+    "build": "cd dash-public && ng build --base-href ./",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
