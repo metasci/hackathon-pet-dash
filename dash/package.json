@@ -4,18 +4,19 @@
   "description": "",
   "main": "main.js",
   "scripts": {
+    "start": "electron .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/metasci/hackathon-pet-dash.git"
+    "url": "git+https://github.com/metasci/lazgotchi.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/metasci/hackathon-pet-dash/issues"
+    "url": "https://github.com/metasci/lazgotchi/issues"
   },
-  "homepage": "https://github.com/metasci/hackathon-pet-dash#readme",
+  "homepage": "https://github.com/metasci/lazgotchi#readme",
   "devDependencies": {
     "electron": "^8.2.5"
   }
