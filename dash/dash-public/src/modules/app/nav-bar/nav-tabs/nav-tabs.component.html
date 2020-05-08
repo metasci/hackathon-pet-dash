@@ -1,4 +1,4 @@
-<nav mat-tab-nav-bar>
+<nav mat-tab-nav-bar style="text-align: center;">
 	<a mat-tab-link
 		mat-button color="accent"
 	   routerLink="one"
@@ -13,6 +13,11 @@
 	   [active]="rla.isActive">
 	  <h2>Two</h2>
 	</a>
+	<a mat-tab-link
+		mat-button color="accent"
+	   routerLink="three"
+	   routerLinkActive #rla="routerLinkActive"
+	   [active]="rla.isActive">
+	  <h2>Three</h2>
+	</a>
 </nav>
-  
-<router-outlet></router-outlet>
