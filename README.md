@@ -2,8 +2,10 @@
 
 ### To start the dashboard:
 Install nodejs
-Execute command: `npm install -g @angular/cli`  
+Execute command: `npm install -g @angular/cli`
 
+navigate to {project-root}/dash/dash-public
+Execute command: `ng add @angular/material`
 
 On command line:  
 navigate to {project-root}/dash  

@@ -58,6 +58,16 @@ namespace DesktopPet
             totalWaterLabel.Text = "Total Water Drank: " + Program.MyData.GetTotalWaterDrank() + " oz";
         }
 
+        private void walkStartClick(object sender, EventArgs e)
+        {
+            walkStartTime.Text = "Start Time: " + System.DateTime.Now;
+        }
+
+        private void walkEndClick(object sender, EventArgs e)
+        {
+            walkEndTime.Text = "End Time: " + System.DateTime.Now;
+        }
+
         private void waterValueAdded(object sender, EventArgs e)
         {
             string waterValue = waterValueInput.Text;
