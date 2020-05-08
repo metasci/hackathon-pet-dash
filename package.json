@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/metasci/hackathon-pet-dash/issues"
   },
-  "homepage": "https://github.com/metasci/hackathon-pet-dash#readme"
+  "homepage": "https://github.com/metasci/hackathon-pet-dash#readme",
+  "devDependencies": {
+    "electron": "^8.2.5"
+  }
 }
