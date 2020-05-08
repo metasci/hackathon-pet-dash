@@ -145,6 +145,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DatabaseDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DatabaseDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="dotNet\Animations.cs" />
     <Compile Include="dotNet\ContextMenus.cs" />
     <Compile Include="dotNet\EmbeddedAssembly.cs" />
@@ -238,6 +243,17 @@
     <None Include="app.config">
       <SubType>Designer</SubType>
     </None>
+    <None Include="DatabaseDataSet.xsc">
+      <DependentUpon>DatabaseDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DatabaseDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DatabaseDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DatabaseDataSet.xss">
+      <DependentUpon>DatabaseDataSet.xsd</DependentUpon>
+    </None>
     <None Include="dotNet\app.config" />
     <None Include="packages.config" />
     <None Include="Properties\app.manifest">
@@ -253,6 +269,13 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Database.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Database_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>Database.mdf</DependentUpon>
+    </Content>
     <Content Include="esheep.png.ico" />
     <Content Include="icon.ico" />
     <Content Include="Images\exit.png" />

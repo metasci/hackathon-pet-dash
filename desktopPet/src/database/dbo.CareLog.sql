@@ -1,0 +1,7 @@
+﻿CREATE TABLE [dbo].[CareLog]
+(
+	[Id] INT NOT NULL IDENTITY(1,1) PRIMARY KEY, 
+    [DateTime] DATETIME NOT NULL, 
+    [Event] VARCHAR(50) NOT NULL, 
+    [Value] VARCHAR(50) NULL,
+)
