@@ -53,7 +53,13 @@ namespace DesktopPet
 
         private void FormOptions_Load(object sender, EventArgs e)
         {
+            totalWaterLabel.Text = "Total Water Drank: " + Program.MyData.GetTotalWaterDrank() + " oz";
+        }
 
+        private void waterValueAdded(object sender, EventArgs e)
+        {
+            Program.MyData.AddWater(waterValueInput.Text);
+            totalWaterLabel.Text = "Total Water Drank: " + Program.MyData.GetTotalWaterDrank() + " oz";
         }
     }
 }

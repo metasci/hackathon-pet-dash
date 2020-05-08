@@ -130,6 +130,21 @@ namespace DesktopPet
             return AppSettings["xml"].Value;
         }
 
+        public int GetTotalWaterDrank()
+        {
+            int.TryParse(AppSettings["TotalWaterDrank"].Value, out int ret);
+            return Math.Max(0, ret);
+        }
+
+        public void AddWater(string oz)
+        {
+            int waterValue = GetTotalWaterDrank();
+            waterValue += int.Parse(oz);
+            Properties.Settings.Default.TotalWaterDrank = waterValue;
+            AppSettings["TotalWaterDrank"].Value = waterValue.ToString();
+            Save();
+        }
+
         public string LoadXML()
         {
             XmlSerializer mySerializer = new XmlSerializer(typeof(XmlData.RootNode));

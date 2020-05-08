@@ -42,6 +42,9 @@ namespace DesktopPet
             this.waterLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.sleepLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.dressUpLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
+            this.waterValueInput = new System.Windows.Forms.TextBox();
+            this.waterValueButton = new System.Windows.Forms.Button();
+            this.totalWaterLabel = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.walkTabPage.SuspendLayout();
             this.eatTabPage.SuspendLayout();
@@ -188,22 +191,57 @@ namespace DesktopPet
             this.waterLayoutPanel.ColumnCount = 2;
             this.waterLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.waterLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.waterLayoutPanel.Controls.Add(this.waterValueInput, 0, 0);
+            this.waterLayoutPanel.Controls.Add(this.waterValueButton, 1, 0);
+            this.waterLayoutPanel.Controls.Add(this.totalWaterLabel, 0, 1);
             this.waterLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.waterLayoutPanel.Location = new System.Drawing.Point(0, 0);
             this.waterLayoutPanel.Name = "waterLayoutPanel";
             this.waterLayoutPanel.RowCount = 10;
-            this.waterLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 23.83721F));
-            this.waterLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 76.16279F));
-            this.waterLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 133F));
+            this.waterLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50f));
+            this.waterLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
+            this.waterLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
+            this.waterLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
+            this.waterLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
             this.waterLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.waterLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.waterLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.waterLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.waterLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.waterLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.waterLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.waterLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
+            this.waterLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.waterLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.waterLayoutPanel.Size = new System.Drawing.Size(357, 333);
             this.waterLayoutPanel.TabIndex = 0;
+            // 
+            // waterValueInput
+            // 
+            this.waterValueInput.AutoSize = true;
+            this.waterValueInput.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.waterValueInput.Location = new System.Drawing.Point(143, 197);
+            this.waterValueInput.Name = "waterValueInput";
+            this.waterValueInput.Size = new System.Drawing.Size(205, 13);
+            this.waterValueInput.TabIndex = 0;
+            // 
+            // waterValueButton
+            // 
+            this.waterValueButton.AutoSize = true;
+            this.waterValueButton.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.waterValueButton.Location = new System.Drawing.Point(143, 197);
+            this.waterValueButton.Name = "waterValueButton";
+            this.waterValueButton.Size = new System.Drawing.Size(205, 13);
+            this.waterValueButton.TabIndex = 1;
+            this.waterValueButton.Text = "Add oz of water";
+            this.waterValueButton.UseVisualStyleBackColor = true;
+            this.waterValueButton.Click += new System.EventHandler(this.waterValueAdded);
+            // 
+            // totalWaterLabel
+            // 
+            this.totalWaterLabel.AutoSize = true;
+            this.totalWaterLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.totalWaterLabel.Location = new System.Drawing.Point(0, 0);
+            this.totalWaterLabel.Name = "totalWaterLabel";
+            this.totalWaterLabel.Size = new System.Drawing.Size(205, 20);
+            this.waterLayoutPanel.SetColumnSpan(this.totalWaterLabel, 2);
+            this.totalWaterLabel.TabIndex = 2;
+            this.totalWaterLabel.Text = "Total Water Drank: 0 oz";
+            this.totalWaterLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // sleepTabPage
             // 
@@ -317,6 +355,9 @@ namespace DesktopPet
         private System.Windows.Forms.TableLayoutPanel exerciseLayoutPanel;
         private System.Windows.Forms.TabPage waterTabPage;
         private System.Windows.Forms.TableLayoutPanel waterLayoutPanel;
+        private System.Windows.Forms.TextBox waterValueInput;
+        private System.Windows.Forms.Button waterValueButton;
+        private System.Windows.Forms.Label totalWaterLabel;
         private System.Windows.Forms.TabPage sleepTabPage;
         private System.Windows.Forms.TableLayoutPanel sleepLayoutPanel;
         private System.Windows.Forms.TabPage dressUpTabPage;
