@@ -145,11 +145,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DatabaseDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DatabaseDataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="dotNet\Animations.cs" />
     <Compile Include="dotNet\ContextMenus.cs" />
     <Compile Include="dotNet\EmbeddedAssembly.cs" />
@@ -212,6 +207,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
     <Compile Include="Settings.cs" />
+    <Compile Include="Portable\WaterController.cs" />
     <Compile Include="Tools\XmlToDot.cs" />
     <Compile Include="dotNet\Xml.cs" />
     <EmbeddedResource Include="dotNet\FormPet.resx">
@@ -242,17 +238,6 @@
     </EmbeddedResource>
     <None Include="app.config">
       <SubType>Designer</SubType>
-    </None>
-    <None Include="DatabaseDataSet.xsc">
-      <DependentUpon>DatabaseDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="DatabaseDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>DatabaseDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="DatabaseDataSet.xss">
-      <DependentUpon>DatabaseDataSet.xsd</DependentUpon>
     </None>
     <None Include="dotNet\app.config" />
     <None Include="packages.config" />

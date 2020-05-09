@@ -52,6 +52,7 @@ namespace DesktopPet
         public static string ArgumentInstall = "";
 
         public static LocalData MyData = new LocalData();
+        public static WaterController WaterController = new WaterController();
 
         /// <summary>
         /// Open the option dialog, to show some options like reset XML animation or load animation from the webpage.
