@@ -57,6 +57,9 @@ namespace DesktopPet
         {
             int totalWaterDrank = Program.WaterController.GetTotalWaterDrank();
             totalWaterLabel.Text = "Total Water Drank: " + totalWaterDrank + " oz";
+
+            string lastWaterDrank = Program.WaterController.GetMostRecentWater();
+            lastWaterDrankLabel.Text = "Last Water Drank: " + lastWaterDrank;
         }
 
         private void walkStartClick(object sender, EventArgs e)
@@ -76,6 +79,9 @@ namespace DesktopPet
 
             int totalWaterDrank = Program.WaterController.GetTotalWaterDrank();
             totalWaterLabel.Text = "Total Water Drank: " + totalWaterDrank + " oz";
+
+            string lastWaterDrank = Program.WaterController.GetMostRecentWater();
+            lastWaterDrankLabel.Text = "Last Water Drank: " + lastWaterDrank;
         }
     }
 }

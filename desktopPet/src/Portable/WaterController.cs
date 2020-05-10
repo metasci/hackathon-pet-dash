@@ -73,5 +73,33 @@ namespace DesktopPet
             }
             return totalWaterDrank;
         }
+
+        public string GetMostRecentWater()
+        {
+            string returnValue = "";
+            using (SqlConnection con = new SqlConnection(sqlCon))
+            {
+                con.Open();
+
+                string sql = @"SELECT DateTime FROM WaterLog ORDER BY DateTime DESC";
+                using (SqlCommand cmd = new SqlCommand(sql, con))
+                {
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        if (reader.HasRows)
+                        {
+                            reader.Read();
+                            if (!(reader["DateTime"] is DBNull))
+                            {
+                                returnValue = Convert.ToString(reader["DateTime"]);
+                            }
+                        }
+                    }
+                }
+
+                con.Close();
+            }
+            return returnValue;
+        }
     }
 }
