@@ -11,6 +11,9 @@ import { NavTabsComponent } from './nav-bar/nav-tabs/nav-tabs.component';
 import { PageOneComponent } from './page-one/page-one.component';
 import { PageTwoComponent } from './page-two/page-two.component';
 import { PageThreeComponent } from './page-three/page-three.component';
+import { DragBoxComponent } from './page-two/drag-box/drag-box.component';
+import { AnimalsComponent } from './page-two/animals/animals.component';
+import { DragListComponent } from './page-two/drag-list/drag-list.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +22,10 @@ import { PageThreeComponent } from './page-three/page-three.component';
     NavTabsComponent,
     PageOneComponent,
     PageTwoComponent,
-    PageThreeComponent
+    PageThreeComponent,
+    DragBoxComponent,
+    AnimalsComponent,
+    DragListComponent
   ],
   imports: [
     BrowserModule,
